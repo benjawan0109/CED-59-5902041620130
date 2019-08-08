@@ -7,20 +7,20 @@
     function chack() {
     var checkname = document.forms["tast"]["sunames"].value;
     if (checkname == "") {
-        alert("กรุณากรอก ชื่อจริง");
+        alert("Enter name");
         document.getElementById("sun").focus();
         return false;
     }
     {
         var checklastname = document.forms["tast"]["lastnames"].value;
         if (checklastname == "") {
-            alert("กรุณากรอก นามสกุล");
+            alert("Enter lastname");
             document.getElementById("lastn").focus();
             return false;
         }
         var checkusename = document.forms["tast"]["usenames"].value;
         if (checkusename == "") {
-            alert("กรุณากรอก ชื่อเล่น");
+            alert("Enter Username");
             document.getElementById("suen").focus();
             return false;
         }
@@ -28,7 +28,7 @@
         var password = document.forms["tast"]["passwords"].value;
         var checkPass = regularP.exec(password);
         if (!checkPass) {
-            alert("กรุณารหัส ให้ถูกต้อง");
+            alert("Enter Password");
             document.getElementById("pass").focus();
             return false;
         }
@@ -36,12 +36,12 @@
         var Email = document.forms["tast"]["emails"].value;
         var checkEmail = regularE.exec(Email);
         if (!checkEmail) {
-            alert("กรุณา Email ให้ถูกต้อง");
+            alert("Enter email");
             document.getElementById("Email").focus();
             return false;
         }
         if (!checkName == "" && !checkUsername == "" && checkPass && checkEmail) {
-            alert("Every thing is Success !! ");
+            alert("Success");
             return true;
         } else {
             return false;

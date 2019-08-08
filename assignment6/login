@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <style>
+table, th, td {
+  border-collapse: collapse;
+}
+    <meta charset="UTF-8">
+    <title>login</title>
+    <script language ="JavaScript">
+        function check()
+            {
+                FirstName = document.login.name.value;
+                if(Name.length == "")
+                {
+                    alert("Enter your name");
+                    return false;
+                }
+             
+                var regularP = /^[a-z 0-9-]{8,18}$/;
+        var password = document.forms["tast"]["passwords"].value;
+        var checkPass = regularP.exec(password);
+        if (!checkPass) {
+            alert("Enter password");
+            document.getElementById("pass").focus();
+            return false;
+        }
+        var regularE = /^(\w_\.= - + ] +)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+        var Email = document.login["tast"]["emails"].value;
+        var checkEmail = regularE.exec(mail);
+        if (!checkEmail) {
+            alert("Enter your email");
+            document.getElementById("mail").focus();
+            return false;
+        }
+        if (!checkName == "" && !checkUsername == "" && checkPass && checkEmail) {
+            alert("Success !! ");
+            return true;
+        } else {
+            return false;
+        }
+            }
+    </script>
+</style>
+</head>
+<body bgcolor="pink">
+<center>
+    <table  border="0" width="500px" >
+        <form name="login" method="post" action="/" onsubmit="return check()">
+
+               <table style="width:30%" id="contact-form" align="center" action="/save", method="POST" >
+	<tr>
+		<th colspan="2">Login page </th>
+	</tr>
+	<tr>
+		<td>Name & Surname</td>
+		<td ><input type = "text" name = "Name" /></td>
+	</tr>
+	<tr>
+		<td>User</td>
+		<td ><input type = "text" user = "User" /></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td ><input type = "text" email = "Email" id="mail" /></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td ><input type = "text" pass = "Password" id="pass" /></td>
+	</tr>
+	<tr>
+		<th colspan="2"><input type = "submit" value = "submit" style="background-color:#7FFFD4"/></th>
+	</tr>
+</table>
+        </form>
+    </table>
+</center>
+</body>
+</html>

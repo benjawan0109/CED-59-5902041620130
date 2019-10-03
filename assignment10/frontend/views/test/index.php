@@ -1,0 +1,2 @@
+asdfghjkl
+<?php echo $data; ?>
